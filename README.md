@@ -20,8 +20,10 @@ Or install it yourself as:
 
 ## Usage
 
+```
 Postman::Client::Dispatcher.new(:host => 'http://host').send_mail(:subject => 'subject', :body => 'body', :emails => ['text@example.com'], :slug => 'system_name')
 Postman::Client::Dispatcher.new(:host => 'http://host').send_sms(:body => 'body', :phones => ['1234567890'], :slug => 'system_name')
+```
 
 ## Contributing
 
