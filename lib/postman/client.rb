@@ -23,7 +23,15 @@ module Postman
       private
 
       def send_message(path, data)
-        RestClient.post "#{host}/#{path}", data, :content_type => :json, :accept => :json
+        RestClient::Request.execute(
+          method: :post,
+          url: "#{host}/#{path}",
+          verify_ssl: false,
+          headers: {
+            content_type: :json,
+            accept: :json
+          }
+        )
       end
     end
   end
