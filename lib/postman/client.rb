@@ -28,6 +28,7 @@ module Postman
           url: "#{host}/#{path}",
           verify_ssl: false,
           headers: {
+            params: data,
             content_type: :json,
             accept: :json
           }
