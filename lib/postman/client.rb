@@ -29,7 +29,7 @@ module Postman
           verify_ssl: false,
           payload: data,
           headers: {
-            params: data,
+            #params: data, # this raise RestClient::URITooLong error
             content_type: :json,
             accept: :json
           }
